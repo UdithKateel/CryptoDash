@@ -8,11 +8,11 @@ import { useColorModeValue } from '../components/ui/color-mode';
 import { BiSupport } from "react-icons/bi";
 
 const Sidenav = () => {
-    const boxShadow = useColorModeValue(
+   const boxShadow = useColorModeValue(
     'md rgba(0, 0, 40, 0.5)', // Light mode shadow
-    'md rgba(255, 255, 255, 0.2)' // Dark mode shadow
+    'md rgba(0, 0, 0, 0.7)'   // Dark mode shadow
   );
-  const bg = useColorModeValue('white', 'gray.800'); 
+  const bg = useColorModeValue('white', 'gray.900'); 
   const navlinks = [
     {
       icon: RxDashboard,
@@ -29,7 +29,7 @@ const Sidenav = () => {
   return (
      <Stack justify={"space-between"} boxShadow={boxShadow} bg={bg} p={4} borderRadius="md" maxW={"250px"} minH={"100vh"}>
       <Box>
-        <Heading as="h1"fontSize={"20px"} pt={"56px"} textAlign={"center"}>@USKREACTPROJECT</Heading>
+        <Heading as="h1"fontSize={"20px"} pt={"56px"} textAlign={"center"} color={"#BF40BF"}>@USKREACTPROJECT</Heading>
       <Box  mt={4} >
         {navlinks.map((ele) => (
         <HStack  key={ele.text} py={3} px={3}  border="2px solid transparent" borderRadius={"5px"}
