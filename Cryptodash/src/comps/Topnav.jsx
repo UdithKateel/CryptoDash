@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex ,Container, HStack, Icon} from '@chakra-ui/react'
+import { Flex ,Container, HStack, Icon, Box} from '@chakra-ui/react'
 import { useColorModeValue } from '../components/ui/color-mode'
 import {
   MenuContent,
@@ -16,19 +16,22 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaQuestionCircle } from "react-icons/fa";
 import { CiCircleInfo } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
+import { FaBars } from "react-icons/fa";
 
 
-const Topnav = () => {
+const Topnav = ({title,open,setOpen}) => {
      const boxShadow = useColorModeValue(
     'md rgba(0, 0, 40, 0.5)', // Light mode shadow
     'md rgba(0, 0, 0, 0.7)'   // Dark mode shadow
   );
     const bg = useColorModeValue('white', 'gray.900'); 
   return (
-    <HStack justify={"space-between"} px={10} bg={bg} h={16}
+    <Box px={5}>
+    <HStack justify={"space-between"} px={3} bg={bg} h={16} maxW={"72rem"} mx={"auto"} borderRadius={"10px"}
       boxShadow={boxShadow}>
-        
-           <Heading as={"h1"} fontSize={"25px"}>DashBoard </Heading>
+       
+            <FaBars onClick={() => setOpen((prev) => !prev)} />
+           <Heading as={"h1"} fontSize={"25px"}>{title} </Heading>
             <MenuRoot>
       <MenuTrigger asChild>
         <Button variant="outline" size="fit" borderRadius={"50%"}>
@@ -55,6 +58,7 @@ const Topnav = () => {
     </MenuRoot>
         
       </HStack>
+      </Box>
   )
 }
 

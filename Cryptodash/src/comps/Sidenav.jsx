@@ -27,7 +27,12 @@ const Sidenav = () => {
   ];
 
   return (
-     <Stack justify={"space-between"} boxShadow={boxShadow} bg={bg} p={4} borderRadius="md" maxW={"250px"} minH={"100vh"}>
+     <Stack
+     display={{
+      base:'none',
+      lg:'flex'
+     }}
+     justify={"space-between"} boxShadow={boxShadow} bg={bg} p={4} borderRadius="md" maxW={"250px"} minH={"100vh"}>
       <Box>
         <Heading as="h1"fontSize={"20px"} pt={"56px"} textAlign={"center"} color={"#BF40BF"}>@USKREACTPROJECT</Heading>
       <Box  mt={4} >
