@@ -1,8 +1,9 @@
 import DashBoardLayout from "../../comps/DashBoardLayout"
+import Portfolio from "./Portfolio"
 const Dashboard = ({}) => {
   return (
     <DashBoardLayout title={"DashBoard"}>
-      <div>How are u</div>
+   <Portfolio/>
     </DashBoardLayout>
   )
 }

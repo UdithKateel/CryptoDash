@@ -24,13 +24,21 @@ const Topnav = ({title,open,setOpen}) => {
     'md rgba(0, 0, 40, 0.5)', // Light mode shadow
     'md rgba(0, 0, 0, 0.7)'   // Dark mode shadow
   );
-    const bg = useColorModeValue('white', 'gray.900'); 
+    const bg = useColorModeValue('white', 'gray.800'); 
+    const toggleside =()=>{
+       setOpen((prev) => !prev)
+    }
   return (
     <Box px={5}>
     <HStack justify={"space-between"} px={3} bg={bg} h={16} maxW={"72rem"} mx={"auto"} borderRadius={"10px"}
       boxShadow={boxShadow}>
-       
-            <FaBars onClick={() => setOpen((prev) => !prev)} />
+            <Box  display={{
+              base:'block',
+              lg:'none'
+            }}>
+              <FaBars onClick={toggleside} />
+            </Box>
+            
            <Heading as={"h1"} fontSize={"25px"}>{title} </Heading>
             <MenuRoot>
       <MenuTrigger asChild>

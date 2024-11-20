@@ -16,9 +16,7 @@ const SideDrawer = ({ open, setOpen, children }) => {
     <DrawerRoot open={open} onOpenChange={(e) => setOpen(e.open)} placement={'start'}>
       <DrawerBackdrop />
       <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Menu</DrawerTitle>
-        </DrawerHeader>
+       
         <DrawerBody>
           {/* Render children */}
           {children}

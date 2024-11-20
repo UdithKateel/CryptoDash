@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Center, Heading, HStack, Stack } from '@chakra-ui/react';
+import { Box, Center, Heading, HStack, Stack, useBreakpointValue } from '@chakra-ui/react';
 import { RxDashboard } from 'react-icons/rx';
 import { GrTransaction } from 'react-icons/gr';
 import { Text } from '@chakra-ui/react';
@@ -7,12 +7,15 @@ import { Icon } from '@chakra-ui/react';
 import { useColorModeValue } from '../components/ui/color-mode';
 import { BiSupport } from "react-icons/bi";
 
+
 const Sidenav = () => {
-   const boxShadow = useColorModeValue(
-    'md rgba(0, 0, 40, 0.5)', // Light mode shadow
-    'md rgba(0, 0, 0, 0.7)'   // Dark mode shadow
-  );
-  const bg = useColorModeValue('white', 'gray.900'); 
+   const boxShadow = useBreakpointValue({
+    base: 'none', // No shadow on small screens
+    md: useColorModeValue('md rgba(0, 0, 40, 0.5)', 'md rgba(0, 0, 0, 0.7)'), // Medium shadow for medium screens
+    lg: useColorModeValue('lg rgba(0, 0, 40, 0.5)', 'lg rgba(0, 0, 0, 0.7)'), // Larger shadow for large screens
+  });
+
+  const bg = useColorModeValue('white', 'gray.800'); 
   const navlinks = [
     {
       icon: RxDashboard,
@@ -28,11 +31,10 @@ const Sidenav = () => {
 
   return (
      <Stack
-     display={{
-      base:'none',
-      lg:'flex'
-     }}
-     justify={"space-between"} boxShadow={boxShadow} bg={bg} p={4} borderRadius="md" maxW={"250px"} minH={"100vh"}>
+     
+     justify={"space-between"} boxShadow={boxShadow} bg={bg} p={4} borderRadius="md" w={{
+      base:"full",lg:"16rem"
+     }} minH={"100vh"}>
       <Box>
         <Heading as="h1"fontSize={"20px"} pt={"56px"} textAlign={"center"} color={"#BF40BF"}>@USKREACTPROJECT</Heading>
       <Box  mt={4} >

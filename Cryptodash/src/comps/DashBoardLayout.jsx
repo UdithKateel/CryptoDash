@@ -7,19 +7,28 @@ import { Box } from '@chakra-ui/react'
 import SideDrawer from './SideDrawer'
 import { useState } from 'react'
 const DashBoardLayout = ({title ,children}) => {
-     const [open, setOpen] = useState(true)
+     const [open, setOpen] = useState(false)
+     
   return (
   
 
 
 
          <Flex>
+          <Box display={{
+      base:'none',
+      lg:'flex'
+     }}>
+
+      <Sidenav />
+     </Box>
+         
             <SideDrawer open={open} setOpen={setOpen} >
-         <Sidenav />
+              <Sidenav />
          </SideDrawer>
        <Box flexGrow="1">
-         <Topnav title={title}  />
-       <Container maxW={"72rem"} mx={"auto"} mt={"30px"} borderRadius={"5px"} bg={"gray.600"} px={4}>{children}</Container>
+         <Topnav title={title} open={open} setOpen={setOpen} />
+       <Container maxW={"72rem"} mx={"auto"} mt={"30px"} borderRadius={'xl'} bg={"gray.800"} px={4}>{children}</Container>
        </Box>
        </Flex>
     
