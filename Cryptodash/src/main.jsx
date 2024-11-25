@@ -10,6 +10,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 const globalStyles = `
   body {
     font-family: 'Ubuntu', sans-serif;
+    
   }
 `;
 createRoot(document.getElementById('root')).render(

@@ -13,7 +13,7 @@ import { Flex } from "@chakra-ui/react";
 const Pricing = () => {
     const timestamps=["9:00 AM","9.30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM"]
   return (
-    <CustomCard bg={"gray.800"} borderRadius={10}>
+    <CustomCard bg={"gray.800"}  borderRadius={10}>
         <Stack p={3}>
         <HStack justify={"space-between"} p={2} flexDir={{
         base:"column",
@@ -64,11 +64,11 @@ const Pricing = () => {
           <Tabs.List>
         
         {["1D","1W","1M","1Y"].map((tab,index)=>(
-            <Tabs.Trigger value={`tab-${index}`}>{tab}</Tabs.Trigger>
+            <Tabs.Trigger key={index} value={`tab-${index+1}`}>{tab}</Tabs.Trigger>
         ))}
       </Tabs.List>
       </Flex>
-      <Tabs.Content value="tab-0">
+      <Tabs.Content value="tab-1">
         <img src={Graph} width={"100%"}/>
       <HStack justify={"space-between"}>
         {timestamps.map((t,index)=>(
@@ -76,13 +76,13 @@ const Pricing = () => {
         ))}
       </HStack>
       </Tabs.Content>
-      <Tabs.Content value="tab-1">
+      <Tabs.Content value="tab-2">
         Tab 1: Content 
       </Tabs.Content>
-      <Tabs.Content value="tab-2">
+      <Tabs.Content value="tab-3">
         Tab 2: Content 
       </Tabs.Content>
-      <Tabs.Content value="tab-3">
+      <Tabs.Content value="tab-4">
         Tab 3: Content 
       </Tabs.Content>
     </Tabs.Root>
