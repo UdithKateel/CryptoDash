@@ -24,7 +24,8 @@ const Portfolio = () => {
     <HStack justify={"space-evenly"} p={"20px"} flexDir={{
         base:"column",
         md:"row"
-    }} >
+    }}
+    bg={"gray.800"} borderRadius={10} >
       <Stack>
         <HStack>
           <Text>Total Portfolio Value</Text>
@@ -94,8 +95,20 @@ const Portfolio = () => {
         base:"column",
         xl:"row"
      }}>
-         <Button bg="#5F00D9" color="white"><PiHandDeposit />Deposit</Button>
-      <Button><PiHandWithdraw />Withdraw</Button>
+         <Button bg="#5F00D9" color="white"  _hover={{
+        borderColor: 'blue.900',
+        boxShadow: 'lg',
+       
+       transition:'ease-in-out'
+        
+      }}  ><PiHandDeposit />Deposit</Button>
+      <Button  _hover={{
+        borderColor: 'black',
+        boxShadow: 'lg',
+       
+       transition:'ease-in-out'
+        
+      }}><PiHandWithdraw />Withdraw</Button>
      </HStack>
     </HStack>
   );

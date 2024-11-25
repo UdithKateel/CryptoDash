@@ -29,8 +29,8 @@ const Topnav = ({title,open,setOpen}) => {
        setOpen((prev) => !prev)
     }
   return (
-    <Box px={5}>
-    <HStack justify={"space-between"} px={3} bg={bg} h={16} maxW={"72rem"} mx={"auto"} borderRadius={"10px"}
+    <Box px={5} my={2}>
+    <HStack justify={"space-between"} px={3} bg={bg} h={16} maxW={"75rem"} mx={"auto"} borderRadius={"10px"}
       boxShadow={boxShadow}>
             <Box  display={{
               base:'block',
