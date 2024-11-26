@@ -28,7 +28,7 @@ const DashBoardLayout = ({title ,children}) => {
          </SideDrawer>
        <Box flexGrow="1">
          <Topnav title={title} open={open} setOpen={setOpen} />
-       <Container maxW={"72rem"} mx={"auto"} mt={"30px"} borderRadius={'xl'}  px={4}>{children}</Container>
+       <Container maxW={"72rem"} mx={"auto"} mt={"30px"} borderRadius={'xl'} overflowX={'hidden'} overflowY={'auto'} h={"calc(100vh-64px)"} px={4}>{children}</Container>
        </Box>
        </Flex>
     

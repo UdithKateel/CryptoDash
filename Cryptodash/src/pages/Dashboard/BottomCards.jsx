@@ -19,7 +19,7 @@ const BottomCards = (props) => {
       {props.title}
     </Tag>
 
-            <Text fontWeight={'bold'} color={props.c}>{props.content}</Text>
+            <Text fontWeight={800} color={props.c}>{props.content}</Text>
         </Stack>
 
     </CustomCard>

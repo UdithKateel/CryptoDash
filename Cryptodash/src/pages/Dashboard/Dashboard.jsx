@@ -12,9 +12,12 @@ const Dashboard = ({}) => {
     <DashBoardLayout title={"DashBoard"}>
       <Grid   gridTemplateColumns={{
         base:"repeat(1,1fr)",
-        md:"repeat(2,1fr)"
+        lg:"repeat(2,1fr)"
       }} gap={"24px"}>
-        <GridItem colSpan={2}>
+        <GridItem colSpan={{
+          base:1,
+          lg:2
+        }}>
           <Portfolio/>
         </GridItem>
       

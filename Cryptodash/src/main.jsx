@@ -6,6 +6,7 @@ import {Provider}from "./components/ui/provider.jsx"
 import "@fontsource/ubuntu"; // Defaults to weight 400
 import { Global } from '@emotion/react';
 import { ChakraProvider } from '@chakra-ui/react'
+import { BrowserRouter } from 'react-router-dom'
 
 const globalStyles = `
   body {
@@ -14,6 +15,7 @@ const globalStyles = `
   }
 `;
 createRoot(document.getElementById('root')).render(
+  
   <StrictMode>
     <Provider>
      <Global styles={globalStyles}/>

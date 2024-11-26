@@ -41,7 +41,7 @@ const Pricing = () => {
       </Stack> 
       <HStack gap={5} flexDir={{
         base:"column",
-        xl:"row"
+        lg:"row"
      }}>
          <Button bg="#5F00D9" color="white"  _hover={{
         borderColor: 'blue.900',
