@@ -10,7 +10,7 @@ import { PiCurrencyBtcFill } from "react-icons/pi";
 import { TbCoinRupeeFilled } from "react-icons/tb";
 const RecentTransc = () => {
   return (
-    <CustomCard bg={"gray.800"}  borderRadius={10}>
+    <CustomCard bg={"gray.900"}  borderRadius={10}>
         <Stack p={3} gap={5}  >
             <Text mx={3}>Transactions</Text>
             <Flex justify={"space-between"} align={"center"}>

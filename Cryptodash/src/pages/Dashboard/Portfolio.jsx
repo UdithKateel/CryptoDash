@@ -25,7 +25,7 @@ const Portfolio = () => {
         base:"column",
         md:"row"
     }}
-    bg={"gray.800"} borderRadius={10} >
+    bg={"gray.900"} borderRadius={10} >
       <Stack>
         <HStack>
           <Text>Total Portfolio Value</Text>

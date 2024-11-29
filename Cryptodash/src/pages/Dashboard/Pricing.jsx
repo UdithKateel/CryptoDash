@@ -13,7 +13,7 @@ import { Flex } from "@chakra-ui/react";
 const Pricing = () => {
     const timestamps=["9:00 AM","9.30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM"]
   return (
-    <CustomCard bg={"gray.800"}  borderRadius={10}>
+    <CustomCard bg={"gray.900"}  borderRadius={10}>
         <Stack p={3}>
         <HStack justify={"space-between"} p={2} flexDir={{
         base:"column",

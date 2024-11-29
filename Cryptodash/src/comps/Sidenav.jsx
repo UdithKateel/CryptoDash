@@ -9,6 +9,7 @@ import { BiSupport } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Sidenav = () => {
    const navigate = useNavigate();
 
@@ -36,11 +37,23 @@ const Sidenav = () => {
   ];
 
   return (
-     <Stack
-     
-     justify={"space-between"} boxShadow={boxShadow} bg={bg} p={4} borderRadius="md" w={{
-      base:"full",lg:"16rem"
-     }} minH={"100vh"}>
+      <Stack
+      justify="space-between"
+      boxShadow={boxShadow}
+      bg={bg}
+      p={4}
+      borderRadius="md"
+      w={{
+        base: '16rem', // Fixed width for small screens
+        lg: '16rem', // Fixed width for large screens
+      }}
+      flexShrink={0} // Prevent shrinking
+      position="fixed" // Keeps the sidebar fixed
+      left={0}
+      top={0}
+      h="100vh" // Full height of the viewport
+      overflow="hidden" // Prevent content overflow within the sidebar
+    >
       <Box>
         <Heading as="h1"fontSize={"20px"} pt={"56px"} textAlign={"center"} color={"#BF40BF"}>@USKREACTPROJECT</Heading>
       <Box  mt={4} >
@@ -67,7 +80,7 @@ const Sidenav = () => {
        transition:'ease-in-out'
         
       }} >
-        
+        <BiSupport />
           <Text>Support</Text>
         </HStack>
     </Stack>
